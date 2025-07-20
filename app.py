@@ -1,9 +1,12 @@
+import os
 from flask import Flask, request, jsonify, render_template
 import speech_recognition as sr
-import tempfile, os
+import tempfile
 from flask_cors import CORS
 
-app = Flask(__name__,template_folder='templates')
+template_dir = os.path.abspath('templates')  # Absolute path
+
+app = Flask(__name__, template_folder=template_dir)
 CORS(app)
 
 @app.route('/')
