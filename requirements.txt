@@ -1,8 +1,4 @@
 Flask
+Flask-Cors
 SpeechRecognition
-pydub
 gunicorn
-pyaudio
-textblob
-transformers
-torch
