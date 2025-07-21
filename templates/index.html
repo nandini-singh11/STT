@@ -49,7 +49,7 @@
         formData.append("audio", blob, "recording.wav");
         formData.append("lang", selectedLanguage);
 
-        fetch("http://127.0.0.1:5000/transcribe", {
+        fetch("https://stt-vtmh.onrender.com/transcribe", {
           method: "POST",
           body: formData
         })
@@ -71,6 +71,7 @@
       utterance.lang = document.getElementById("language").value;
       speechSynthesis.speak(utterance);
     }
+    mediaRecorder = MedaiRecorder(stream,{mimeType:'audio/wav'});
   </script>
 </body>
 </html>
